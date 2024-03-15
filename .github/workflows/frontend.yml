@@ -58,3 +58,9 @@ jobs:
           npm install
           npm fund
           npm run build:prod
+      - name: upload result
+        uses: actions/upload-artifact@v1
+        with:
+          name: my-artifact
+          path: ${{ github.workspace }}
+
